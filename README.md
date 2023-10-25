@@ -1,2 +1,3 @@
-# tt_projeto_sprint_4
-# **Certifique-se de atualizar o arquivo README quando terminar. Ele deve incluir uma breve descrição do projeto, explicando para que serve o aplicativo web e quais funcionalidades ele oferece.**
+# O que vende um carro?
+
+Você é analista na Lista de Eixo de Manivela. Centenas de propagandas gratuitas de veículos são publicadas no seu site todos os dias. Você precisa estudar os dados coletados nos últimos anos e determinar quais fatores influenciaram o preço de um veículo.
