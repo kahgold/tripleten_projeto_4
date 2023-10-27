@@ -60,17 +60,22 @@ build_mtx_corr = stm.checkbox('Criar uma matriz de correlação')
 build_box = stm.checkbox('Criar um boxplot')
 build_bar = stm.checkbox('Criar um boxplot')
 
-if build_histogram: # se a caixa de seleção for selecionada
+# se a caixa de seleção for selecionada
+if build_histogram: 
      stm.write('Criando um histograma para a coluna odometer')
 
-if build_scatter: # se a caixa de seleção for selecionada
+# se a caixa de seleção for selecionada
+if build_scatter: 
      stm.write('Criando um gráfico de dispersão para as colunas model_year e odometer')
 
-if build_mtx_corr: # se a caixa de seleção for selecionada
+# se a caixa de seleção for selecionada
+if build_mtx_corr: 
      stm.write('Criando uma matriz de correlação para o dataframe df_cars')
 
+# se a caixa de seleção for selecionada
 if build_box:
      stm.write('Criando um boxplot para as colunas paint_color e price')
 
+# se a caixa de seleção for selecionada
 if build_bar:
      stm.write('Criando um gráfico de barra para a coluna price')
