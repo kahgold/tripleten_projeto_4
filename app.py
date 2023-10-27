@@ -6,17 +6,14 @@ import streamlit as strm
 # Cabeçalho
 strm.header('Visualização do conjunto de dados de anúncios de vendas de carros graficamente')
 
-
 # lendo os dados
 df_cars = pd.read_csv('vehicles_us.csv') 
-
 
 # criar um botão
 hist_button = strm.button('Criar um histograma')
 scatter_button = strm.button('Criar gráfico de dispersão')
 box_button = strm.button('Criar um boxplot')
 bar_button = strm.button('Criar um gráfico de barras')
-
 
 # se o botão for clicado
 if hist_button:
@@ -51,13 +48,11 @@ if bar_button:
   # exibir um gráfico Plotly interativo
   strm.plotly_chart(fig2, use_container_width=True)
 
-
 # criar uma caixa de seleção
 build_histogram = strm.checkbox('Criar um histograma')
 build_scatter = strm.checkbox('Criar um gráfico de dispersão')
 build_box = strm.checkbox('Criar um boxplot')
 build_bar = strm.checkbox('Criar um gráfico de barras')
-
 
 # se a caixa de seleção for selecionada
 if build_histogram: 
