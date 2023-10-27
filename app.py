@@ -88,6 +88,6 @@ if bar_button:
   strm.write('Criando um gráfico de barras para o conjunto de dados de anúncios de vendas de carros')
   # criar um gráfico de barras
   fig5 = px.bar(df_cars, x='paint_color', template='none', color='paint_color')
-  fig5.update_layout(title='Contagem de Veículos por Cor', autosize=False, width=500, height=500
+  fig5.update_layout(title='Contagem de Veículos por Cor', autosize=False, width=500, height=500)
   # exibir um gráfico Plotly interativo
   strm.plotly_chart(fig5, use_container_width=True)
