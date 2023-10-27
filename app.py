@@ -31,4 +31,4 @@ if build_histogram: # se a caixa de seleção for selecionada
      stm.write('Criando um histograma para a coluna odometer')
 
 if build_scatter:
-     stm.write('Criando um gráfico de dispersão para as colunas model_tear e odometer')
+    stm.write('Criando um gráfico de dispersão para as colunas model_tear e odometer')
