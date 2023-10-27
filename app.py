@@ -21,7 +21,7 @@ bar_button = strm.button('Criar um gráfico de barras')
 # se o botão for clicado
 if hist_button:
   # escrever uma mensagem
-  strm.write('Criando um histograma para o conjunto de dados de anúncios de vendas de carros') 
+  strm.write('Criando um histograma para o conjunto de dados de anúncios de vendas de carros')
   # criar um histograma
   fig1 = px.histogram(df_cars, x='odometer')
   # exibir um gráfico Plotly interativo
