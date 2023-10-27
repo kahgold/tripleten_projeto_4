@@ -64,8 +64,7 @@ if mtz_corr_button:
   strm.write('Criando um histograma para o conjunto de dados de anúncios de vendas de carros')
   # criar uma matriz de correlação
   corr_mtz = df_cars.iloc[:, [0, 1, 4, 6, 10]].corr()
-  fig3 = px.imshow(df_cars, corr_mtz, text_auto=True,
-                   color_continuous_scale=[(0, "blue"), (0.5, "orange"), (1, "purple")])
+  fig3 = px.imshow(df_cars, corr_mtz, text_auto=True)
   fig3.update_layout(title='Matriz de Correlação', autosize=False, width=500, height=500)
   # exibir um gráfico Plotly interativo
   strm.plotly_chart(fig3, use_container_width=True)
