@@ -31,7 +31,7 @@ if scatter_button:
   # escrever uma mensagem
   strm.write('Criando um gráfico de dispersão para o conjunto de dados de anúncios de vendas de carros')
   # criar um histograma
-  fig2 = px.histogram(df_cars, x='model_year', y='odometer')
+  fig2 = px.scatter(df_cars, x='model_year', y='odometer')
   # exibir um gráfico Plotly interativo
   strm.plotly_chart(fig2, use_container_width=True)
 
@@ -39,7 +39,7 @@ if box_button:
   # escrever uma mensagem
   strm.write('Criando um boxplot para o conjunto de dados de anúncios de vendas de carros')
   # criar um histograma
-  fig2 = px.histogram(df_cars, x='cylinders')
+  fig2 = px.box(df_cars, x='cylinders')
   # exibir um gráfico Plotly interativo
   strm.plotly_chart(fig2, use_container_width=True)
 
@@ -47,7 +47,7 @@ if bar_button:
   # escrever uma mensagem
   strm.write('Criando um gráfico de barras para o conjunto de dados de anúncios de vendas de carros')
   # criar um histograma
-  fig2 = px.histogram(df_cars, x='paint_color')
+  fig2 = px.bar(df_cars, x='paint_color')
   # exibir um gráfico Plotly interativo
   strm.plotly_chart(fig2, use_container_width=True)
 
