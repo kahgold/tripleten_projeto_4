@@ -11,7 +11,6 @@ df_cars = pd.read_csv('vehicles_us.csv')
 # criar um botão
 hist_button = stm.button('Criar histograma') 
 scat_button = stm.button('Criar gráfico de dispersão') 
-mtx_corr_button = stm.button('Criar matriz de correlação')
 box_buttom = stm.button('Criar boxplot')
 bar_button = stm.buttom('Criar gráfico de barra')
 
@@ -29,17 +28,9 @@ if scat_button:
      # escrever uma mensagem
      stm.write('Criando um gráfico de dispersão para o conjunto de dados de anúncios de vendas de carros')
      # criar um gráfico de dispersão
-     fig2 = px.scatter(df_cars, x='model_year', y='odometer', color_discrete_sequence=px.colors.qualitative.Set3)
+     fig2 = px.scatter(df_cars, x='model_year', y='odometer')
      # exibir um gráfico Plotly interativo
      stm.plotly_chart(fig2, use_container_width=True)
-
-if mtx_corr_button:
-     # escrever uma mensagem
-     stm.write('Criando uma matriz de correlação para o conjunto de dados de anúncios de vendas de carros')
-     # criar uma matriz de correlação
-     fig3 = px.imshow(df_cars, df_cars.iloc[:, [0, 1, 4, 6, 10]].corr())
-     # exibir um gráfico Plotly interativo
-     stm.plotly_chart(fig3, use_container_width=True)
 
 if box_button:
      # escrever uma mensagem
@@ -61,7 +52,6 @@ if bar_button:
 # criar uma caixa de seleção
 build_histogram = stm.checkbox('Criar um histograma')
 build_scatter = stm.checkbox('Criar um gráfico de dispersão')
-build_mtx_corr = stm.checkbox('Criar uma matriz de correlação')
 build_box = stm.checkbox('Criar um boxplot')
 build_bar = stm.checkbox('Criar um boxplot')
 
@@ -73,10 +63,6 @@ if build_histogram:
 # se a caixa de seleção for selecionada
 if build_scatter: 
      stm.write('Criando um gráfico de dispersão para as colunas model_year e odometer')
-
-# se a caixa de seleção for selecionada
-if build_mtx_corr: 
-     stm.write('Criando uma matriz de correlação para o dataframe df_cars')
 
 # se a caixa de seleção for selecionada
 if build_box:
