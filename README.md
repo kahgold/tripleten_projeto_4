@@ -21,3 +21,5 @@ Você é analista na Lista de Eixo de Manivela. Centenas de propagandas gratuita
 
 # **Link do aplicativo**
 - https://vehicles-us-1-o1f4.onrender.com/
+
+# O notebook está em uma pasta .zip pois ficou muito grande para fazer o upload aqui no GitHub (há um limite de tamanho (25MB))
