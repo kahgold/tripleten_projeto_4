@@ -5,6 +5,7 @@ import streamlit as strm
 
 # Cabeçalho
 strm.header('Visualização do conjunto de dados de anúncios de vendas de carros graficamente')
+strm.header('Temos gráficos de histogramas, dispersão, boxplot e barras')
 
 # lendo os dados
 df_cars = pd.read_csv('vehicles_us.csv') 
@@ -15,9 +16,9 @@ hist_button_2 = strm.button('Criar histograma - price')
 scatter_button = strm.button('Criar gráfico de dispersão - df_cars')
 scatter_button_2 = strm.button('Criar gráfico de dispersão - price')
 box_button = strm.button('Criar boxplot - cylinders')
-box_button_2 = strm.button('Criar boxplot - condition')
-bar_button = strm.button('Criar gráfico de barras - paint_color')
-bar_button_2 = strm.button('Criar gráfico de barras - paint_color - tudo')
+box_button_2 = strm.button('Criar boxplot - transmission e price')
+bar_button = strm.button('Criar gráfico de barras - paint_color - contagem de veículos por cor')
+bar_button_2 = strm.button('Criar gráfico de barras - paint_color - cores dos carros')
 
 # se o botão for clicado
 if hist_button:
@@ -78,8 +79,8 @@ if box_button_2:
   # escrever uma mensagem
   strm.write('Criando um boxplot para o conjunto de dados de anúncios de vendas de carros')
   # criar um boxplot
-  fig3_2 = px.box(df_cars, x='condition', color_discrete_sequence=px.colors.qualitative.Dark24_r)
-  fig3_2.update_layout(title='Boxplot da Coluna "condition"', autosize=False, width=500, height=500)
+  fig3_2 = px.box(df_cars, x='transmission', y='price', color='transmission')
+  fig3_2.update_layout(title='Boxplot de Preço por Tipo de Transmissão', autosize=False, width=500, height=500)
   # exibir um gráfico Plotly interativo
   strm.plotly_chart(fig3_2, use_container_width=True)
 
