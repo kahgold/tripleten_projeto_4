@@ -12,16 +12,8 @@ df_cars = pd.read_csv('vehicles_us.csv')
 # criar um botão
 hist_button = strm.button('Criar histograma')
 scatter_button = strm.button('Criar gráfico de dispersão')
-mtz_corr_button = strm.button('Criar matriz de correlação')
 box_button = strm.button('Criar boxplot')
 bar_button = strm.button('Criar gráfico de barras')
-
-# criar uma caixa de seleção
-build_histogram = strm.checkbox('Criar um histograma')
-build_scatter = strm.checkbox('Criar um gráfico de dispersão')
-build_scatter = strm.checkbox('Criar uma matriz de correlação')
-build_box = strm.checkbox('Criar um boxplot')
-build_bar = strm.checkbox('Criar um gráfico de barras')
 
 # se o botão for clicado
 if hist_button:
@@ -48,30 +40,20 @@ if scatter_button:
   strm.plotly_chart(fig2, use_container_width=True)
   # se a caixa de seleção for selecionada
   
-if mtz_corr_button:
-  # escrever uma mensagem
-  strm.write('Criando um histograma para o conjunto de dados de anúncios de vendas de carros')
-  # criar uma matriz de correlação
-  corr_mtz = df_cars.iloc[:, [0, 1, 4, 6, 10]].corr()
-  fig3 = px.imshow(df_cars, corr_mtz, text_auto=True)
-  fig3.update_layout(title='Matriz de Correlação', autosize=False, width=500, height=500)
-  # exibir um gráfico Plotly interativo
-  strm.plotly_chart(fig3, use_container_width=True)
-
 if box_button:
   # escrever uma mensagem
   strm.write('Criando um boxplot para o conjunto de dados de anúncios de vendas de carros')
   # criar um boxplot
-  fig4 = px.box(df_cars, x='cylinders', color_discrete_sequence=px.colors.qualitative.Dark24_r)
-  fig4.update_layout(title='Boxplot da Coluna "cylinders"', autosize=False, width=500, height=500)
+  fig3 = px.box(df_cars, x='cylinders', color_discrete_sequence=px.colors.qualitative.Dark24_r)
+  fig3.update_layout(title='Boxplot da Coluna "cylinders"', autosize=False, width=500, height=500)
   # exibir um gráfico Plotly interativo
-  strm.plotly_chart(fig4, use_container_width=True)
+  strm.plotly_chart(fig3, use_container_width=True)
 
 if bar_button:
   # escrever uma mensagem
   strm.write('Criando um gráfico de barras para o conjunto de dados de anúncios de vendas de carros')
   # criar um gráfico de barras
-  fig5 = px.bar(df_cars, x='paint_color', template='none', color='paint_color')
-  fig5.update_layout(title='Contagem de Veículos por Cor', autosize=False, width=500, height=500)
+  fig4 = px.bar(df_cars, x='paint_color', template='none', color='paint_color')
+  fig4.update_layout(title='Contagem de Veículos por Cor', autosize=False, width=500, height=500)
   # exibir um gráfico Plotly interativo
-  strm.plotly_chart(fig5, use_container_width=True)
+  strm.plotly_chart(fig4, use_container_width=True)
