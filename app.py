@@ -17,7 +17,7 @@ scatter_button_2 = strm.button('Criar gráfico de dispersão - price')
 box_button = strm.button('Criar boxplot - cylinders')
 box_button_2 = strm.button('Criar boxplot - condition')
 bar_button = strm.button('Criar gráfico de barras - paint_color')
-bar_button_2 = strm.button('Criar gráfico de barras - paint_color')
+bar_button_2 = strm.button('Criar gráfico de barras - paint_color - tudo')
 
 # se o botão for clicado
 if hist_button:
